@@ -1,0 +1,26 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "backend service for hosting the fehrware website",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanjfehr/FehrWare-Website.git"
+  },
+  "keywords": [
+    "backend",
+    "bryanjfehr",
+    "website",
+    "python"
+  ],
+  "author": "Bryan Fehr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryanjfehr/FehrWare-Website/issues"
+  },
+  "homepage": "https://github.com/bryanjfehr/FehrWare-Website#readme"
+}

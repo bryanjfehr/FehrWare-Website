@@ -1,0 +1,47 @@
+/* Portfolio section styling */
+.portfolio {
+    padding: 2rem;
+  }
+  
+  .portfolio h2 {
+    color: #FFFFFF; /* White for emphasis */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Project grid */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Project card */
+  .project-card {
+    background: #3A3A3A; /* Slightly lighter grey */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .project-card h3 {
+    color: #00A8A8; /* Teal accent */
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .project-card p {
+    color: #D3D3D3; /* Light grey */
+  }

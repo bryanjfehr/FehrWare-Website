@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding for proper rendering -->
     <meta charset="utf-8" />
+    <!-- Favicon for branding (add your custom favicon to public/) -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Responsive viewport for mobile compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Core SEO Meta Tags -->
+    <!-- Page title (dynamically updated by React, but static fallback optimized) -->
+    <title>FehrWare Tech Solutions | Bryan Fehr - Developer Portfolio</title>
+    <!-- Description: Concise, keyword-rich summary (150-160 chars) -->
+    <meta name="description" content="FehrWare Tech Solutions by Bryan Fehr offers web development, app creation, and tech solutions. Explore my portfolio and contact me!" />
+    <!-- Keywords: Relevant terms for search engines -->
+    <meta name="keywords" content="FehrWare Tech Solutions, Bryan Fehr, web developer, software developer, portfolio, tech solutions, React, Node.js, GCP" />
+    <!-- Author: Establishes ownership -->
+    <meta name="author" content="Bryan Fehr" />
+    <!-- Robots: Allow indexing and following links -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (OG) Tags for Social Media -->
+    <!-- OG Title: Appears when shared on platforms like Facebook -->
+    <meta property="og:title" content="FehrWare Tech Solutions | Bryan Fehr's Developer Portfolio" />
+    <!-- OG Description: Brief and engaging for social previews -->
+    <meta property="og:description" content="Discover Bryan Fehr's work at FehrWare Tech Solutions - innovative web and app development services. Check out my portfolio!" />
+    <!-- OG URL: Canonical link to your site -->
+    <meta property="og:url" content="https://fehrwaretech.ca" />
+    <!-- OG Type: Defines content type -->
+    <meta property="og:type" content="website" />
+    <!-- OG Image: Placeholder (add a custom image to public/, e.g., 1200x630px) -->
+    <meta property="og:image" content="https://fehrwaretech.ca/assets/og-image.jpg" />
+    <!-- OG Site Name: Brand consistency -->
+    <meta property="og:site_name" content="FehrWare Tech Solutions" />
+
+    <!-- Twitter Card Tags -->
+    <!-- Card Type: Summary with large image for Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Twitter Title: Matches OG title -->
+    <meta name="twitter:title" content="FehrWare Tech Solutions | Bryan Fehr's Developer Portfolio" />
+    <!-- Twitter Description: Matches OG description -->
+    <meta name="twitter:description" content="Discover Bryan Fehr's work at FehrWare Tech Solutions - innovative web and app development services. Check out my portfolio!" />
+    <!-- Twitter Image: Same as OG image -->
+    <meta name="twitter:image" content="https://fehrwaretech.ca/assets/og-image.jpg" />
+    <!-- Twitter Creator: Your Twitter handle (update with yours if applicable) -->
+    <meta name="twitter:creator" content="@yourusername" />
+
+    <!-- Theme color for browser UI (matches your dark theme) -->
+    <meta name="theme-color" content="#2E2E2E" />
+    <!-- Roboto font from Google Fonts for your theme -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Optional: Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Fallback content if JavaScript is disabled -->
+    <noscript>
+      <h1>FehrWare Tech Solutions</h1>
+      <p>JavaScript is required to view this site. Please enable it in your browser settings.</p>
+    </noscript>
+    <!-- Root div where React mounts the SPA -->
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Scripts injected here by the build process -->
   </body>
 </html>

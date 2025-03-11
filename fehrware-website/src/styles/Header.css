@@ -1,0 +1,108 @@
+/* Header styling */
+.header {
+    background: #1A1A1A; /* Black background */
+    color: #D3D3D3; /* Light grey text */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+  /* Logo styling */
+  .logo span {
+    color: #FFFFFF; /* White for emphasis */
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .logo span:hover {
+    color: #00A8A8; /* Teal accent on hover */
+  }
+  
+  /* Desktop navigation */
+  .desktop-nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .desktop-nav ul li {
+    margin-left: 2rem; /* Spacing between items */
+  }
+  
+  .desktop-nav ul li span {
+    color: #D3D3D3; /* Light grey */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .desktop-nav ul li span:hover {
+    color: #00A8A8; /* Teal accent on hover */
+  }
+  
+  /* Mobile menu controls */
+  .mobile-menu {
+    display: none; /* Hidden on desktop */
+  }
+  
+  .burger-icon, .settings-icon {
+    font-size: 1.5rem;
+    color: #D3D3D3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .burger-icon:hover, .settings-icon:hover {
+    color: #00A8A8; /* Teal accent on hover */
+  }
+  
+  /* Sidebar for mobile */
+  .sidebar {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #1A1A1A; /* Black background */
+    padding: 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar.open {
+    display: block; /* Show when toggled */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin: 1.5rem 0;
+  }
+  
+  .sidebar ul li span {
+    color: #D3D3D3;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar ul li span:hover {
+    color: #00A8A8; /* Teal accent on hover */
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none; /* Hide desktop nav */
+    }
+    .mobile-menu {
+      display: flex;
+      gap: 1rem; /* Space between icons */
+    }
+  }

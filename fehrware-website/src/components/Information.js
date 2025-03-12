@@ -11,7 +11,7 @@ function Information() {
       <div className="information-container">
         {/* Left section: Image */}
         <div className="information-image">
-          <img src="/assets/photos/about-me.png" alt="About Me" className="about-image" />
+          <img src="https://storage.googleapis.com/fehrware-tech-assets/photos/about-me.png" alt="About Me" className="about-image" />
         </div>
         {/* Right section: About Me and Services Offered */}
         <div className="information-content">

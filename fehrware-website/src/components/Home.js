@@ -8,7 +8,7 @@ function Home() {
       <div className="hero">
         {/* Hero background image, intended as a backdrop */}
         <img
-          src="/assets/photos/hero-background.png" // Updated to .png as per your change
+          src="https://storage.googleapis.com/fehrware-tech-assets/photos/hero-background.png" // Updated to .png as per your change
           alt="Hero Background"
           className="hero-background"
         />

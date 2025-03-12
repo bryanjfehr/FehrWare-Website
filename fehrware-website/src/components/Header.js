@@ -21,7 +21,7 @@ function Header({ setCurrentSection, setShowTimeTab }) {
       {/* Logo section with clickable banner image to return to home */}
       <div className="logo">
         <img
-          src="/assets/logos/fehrware-tech-banner.png"
+          src="https://storage.googleapis.com/fehrware-tech-assets/logos/fehrware-tech-banner.png"
           alt="FehrWare Tech Solutions"
           className="logo-banner"
           onClick={() => setCurrentSection('home')}

@@ -1,66 +1,69 @@
-/* Header styling */
+/* Header styling with dark grey/black theme and teal accents */
 .header {
-    background: #1A1A1A; /* Black background */
-    color: #D3D3D3; /* Light grey text */
+    background: #1A1A1A; /* Black background for header */
+    color: #D3D3D3; /* Light grey text for contrast */
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
   }
   
-  /* Logo styling */
-  .logo span {
-    color: #FFFFFF; /* White for emphasis */
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 500;
+  /* Logo banner styling */
+  .logo {
+    /* Container for the logo image */
+  }
+  
+  .logo-banner {
+    height: 60px; /* Default height for header banner */
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: opacity 0.3s ease; /* Smooth hover effect */
   }
   
-  .logo span:hover {
-    color: #00A8A8; /* Teal accent on hover */
+  .logo-banner:hover {
+    opacity: 0.8; /* Slight fade on hover for interactivity */
   }
   
-  /* Desktop navigation */
+  /* Desktop navigation styling */
   .desktop-nav ul {
     display: flex;
     list-style: none;
   }
   
   .desktop-nav ul li {
-    margin-left: 2rem; /* Spacing between items */
+    margin-left: 2rem; /* Spacing between navigation items */
   }
   
   .desktop-nav ul li span {
-    color: #D3D3D3; /* Light grey */
+    color: #D3D3D3; /* Light grey for text */
     cursor: pointer;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
   }
   
   .desktop-nav ul li span:hover {
     color: #00A8A8; /* Teal accent on hover */
   }
   
-  /* Mobile menu controls */
+  /* Mobile menu controls styling */
   .mobile-menu {
     display: none; /* Hidden on desktop */
   }
   
-  .burger-icon, .settings-icon {
+  .burger-icon,
+  .settings-icon {
     font-size: 1.5rem;
-    color: #D3D3D3;
+    color: #D3D3D3; /* Light grey */
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth hover effect */
   }
   
-  .burger-icon:hover, .settings-icon:hover {
+  .burger-icon:hover,
+  .settings-icon:hover {
     color: #00A8A8; /* Teal accent on hover */
   }
   
-  /* Sidebar for mobile */
+  /* Sidebar styling for mobile navigation */
   .sidebar {
     display: none; /* Hidden by default */
     position: fixed;
@@ -70,7 +73,7 @@
     height: 100%;
     background: #1A1A1A; /* Black background */
     padding: 2rem;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
   }
   
   .sidebar.open {
@@ -82,27 +85,30 @@
   }
   
   .sidebar ul li {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0; /* Vertical spacing between items */
   }
   
   .sidebar ul li span {
-    color: #D3D3D3;
+    color: #D3D3D3; /* Light grey */
     cursor: pointer;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth hover effect */
   }
   
   .sidebar ul li span:hover {
     color: #00A8A8; /* Teal accent on hover */
   }
   
-  /* Mobile adjustments */
+  /* Responsive adjustments for mobile */
   @media (max-width: 768px) {
     .desktop-nav {
-      display: none; /* Hide desktop nav */
+      display: none; /* Hide desktop nav on mobile */
     }
     .mobile-menu {
       display: flex;
-      gap: 1rem; /* Space between icons */
+      gap: 1rem; /* Space between mobile icons */
+    }
+    .logo-banner {
+      height: 40px; /* Smaller size for mobile */
     }
   }

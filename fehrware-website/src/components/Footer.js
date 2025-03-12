@@ -21,9 +21,9 @@ function Footer() {
         <div className="footer-column">
           <h3>Social Media</h3>
           <ul>
-            <li><a href="https://github.com/bryanjfehr" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/bryanjfehr/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://x.com/fehrwaretech/" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/bryan-fehr-463515126/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
         </div>
       </div>
@@ -32,10 +32,10 @@ function Footer() {
         <a href="https://github.com/bryanjfehr" target="_blank" rel="noopener noreferrer">
           <FaGithub className="social-icon" />
         </a>
-        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/fehrwaretech/" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="social-icon" />
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/bryan-fehr-463515126/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" />
         </a>
       </div>

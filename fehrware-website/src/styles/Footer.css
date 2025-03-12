@@ -9,11 +9,15 @@
   /* Desktop footer layout */
   .desktop-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     max-width: 1200px;
     margin: 0 auto 2rem;
   }
-  
+ 
+  .footer-column {
+    flex:0.5
+  }
+
   .footer-column h3 {
     color: #00A8A8; /* Teal accent */
     font-size: 1.5rem;

@@ -67,9 +67,9 @@ function ContactForm() {
       <h2>Contact Me</h2>
       {/* Introductory paragraph explaining contact options */}
       <p className="contact-intro">
-        You can reach me through multiple channels: call me at [PHONE_NUMBER], 
+        You can reach me through multiple channels: call me at (403)478-0570, 
         email me directly at <span className="highlight">bryan.fehr@fehrwaretech.ca</span>, 
-        connect via social media on [SOCIAL_MEDIA_LINKS], or use the email form below...
+        connect via social media(links in footer), or use the email form below.
       </p>
       {/* Contact form with validation */}
       <form onSubmit={handleSubmit}>

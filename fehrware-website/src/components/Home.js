@@ -1,18 +1,18 @@
 import React from 'react';
 import '../styles/Home.css';
 
-// Home component with hero section, updated to use a separate background image instead of logo banner
+// Home component with hero section, featuring a background image behind text
 function Home() {
   return (
     <section className="home">
       <div className="hero">
-        {/* Hero background image, distinct from the logo banner */}
+        {/* Hero background image, intended as a backdrop */}
         <img
-          src="/assets/photos/hero-background.jpg"
+          src="/assets/photos/hero-background.png" // Updated to .png as per your change
           alt="Hero Background"
-          className="hero-banner"
+          className="hero-background"
         />
-        <h1>Welcome to FehrWare Tech Solutions</h1>
+        <h1 className="welcome-header">Welcome to FehrWare Tech Solutions</h1>
         {/* Welcome paragraph with personal introduction */}
         <p>
           Hello! I’m Bryan Fehr, a passionate developer crafting innovative solutions at FehrWare Tech Solutions. 

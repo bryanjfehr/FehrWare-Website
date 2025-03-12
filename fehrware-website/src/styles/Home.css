@@ -1,25 +1,37 @@
-/* Home section styling */
+/* Home section styling with dark grey/black theme and teal accents */
 .home {
-    padding: 2rem;
+    padding: 1rem;
+    position: relative; /* Establish a positioning context for children */
+    overflow: hidden; /* Prevent overflow of background image */
   }
   
-  /* Hero section */
+  /* Hero section container */
   .hero {
     text-align: center;
+    position: relative; /* Allows layering of text over background */
+    min-height: 400px; /* Ensure enough space for content */
+    padding: 1rem;
   }
   
-  .hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  /* Hero background image styling */
+  .hero-background {
+    position: absolute; /* Position behind text */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    object-fit: cover; /* Maintain aspect ratio while filling space */
+    z-index: 0; /* Place behind other content (text has default z-index of 1) */
+    opacity: 0.7; /* Slight transparency for text readability (adjust as needed) */
   }
   
+  /* Hero text styling */
   .hero h1 {
     color: #FFFFFF; /* White for emphasis */
     font-size: 2.5rem;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    position: relative; /* Ensure text stays above background */
+    z-index: 1; /* Place above background */
   }
   
   .hero p {
@@ -28,4 +40,11 @@
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    position: relative; /* Ensure text stays above background */
+    z-index: 1; /* Place above background */
+  }
+
+  .welcome-header {
+    padding: 2rem;
+    margin-top: 1rem;
   }

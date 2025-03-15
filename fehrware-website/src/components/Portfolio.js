@@ -36,8 +36,8 @@ function Portfolio() {
     {
       id: 5,
       image: 'https://storage.googleapis.com/fehrware-tech-assets/photos/project5.png',
-      title: 'TranslationGapFinder',
-      description: 'A back-end service compiling dictionaries of missing translation data for ancient languages.',
+      title: 'GlucoSnap',
+      description: 'An app for simplifying the tracking of blood glucose levels.',
       github: 'https://github.com/bryanjfehr/TranslationGapFinder',
     },
     {

@@ -13,12 +13,14 @@ function Home() {
           className="hero-background"
         />
         <h1 className="welcome-header">Welcome to FehrWare Tech Solutions</h1>
-        {/* Welcome paragraph with personal introduction */}
-        <p>
-          Hello! I’m Bryan Fehr, a passionate developer crafting innovative solutions at FehrWare Tech Solutions. 
-          Whether it’s building sleek websites, robust applications, or solving complex problems, I’m here to bring ideas to life. 
-          Explore my portfolio, discover my services, and let’s connect to create something amazing together!
-        </p>
+        {/* Welcome paragraph with personal introduction and translucent background for readability*/}
+        <div className="welcome-text-background">
+          <p>
+          Welcome! I am Bryan Fehr, a dedicated software developer and the founder of FehrWare Tech Solutions.
+          With a commitment to excellence, I specialize in designing responsive websites, developing cross-platform applications,
+          and delivering tailored solutions to unique challenges. Explore my portfolio, review our service offerings, and collaborate with me to bring your visionary projects to production.
+          </p>
+        </div>
       </div>
     </section>
   );

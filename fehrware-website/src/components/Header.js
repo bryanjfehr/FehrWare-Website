@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { FaBars, FaCog } from 'react-icons/fa'; // Icons for burger menu and settings
+import React from 'react';
+import { FaCog } from 'react-icons/fa'; // Keep settings icon for desktop
 import '../styles/Header.css';
 
-// Header component with navigation and sidebar for mobile, now featuring a logo banner
+// Header component with navigation for desktop, logo-only on mobile
 function Header({ setCurrentSection, setShowTimeTab }) {
-  // State to toggle sidebar visibility on mobile
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  // Array of navigation items for consistency across desktop and sidebar
+  // Array of navigation items for desktop
   const navItems = [
     { name: 'Home', section: 'home' },
     { name: 'Information', section: 'information' },
@@ -38,30 +35,9 @@ function Header({ setCurrentSection, setShowTimeTab }) {
           ))}
         </ul>
       </nav>
-      {/* Mobile menu controls with burger and settings icons */}
-      <div className="mobile-menu">
-        {/* Burger icon to toggle sidebar */}
-        <FaBars onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="burger-icon" />
-        {/* Settings icon to navigate to settings */}
+      {/* Settings icon for desktop */}
+      <div className="desktop-settings">
         <FaCog onClick={() => setCurrentSection('settings')} className="settings-icon" />
-      </div>
-      {/* Sidebar for mobile navigation */}
-      <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-        <ul>
-          {navItems.map((item) => (
-            <li key={item.section}>
-              {/* Click closes sidebar and switches section */}
-              <span
-                onClick={() => {
-                  setCurrentSection(item.section);
-                  setIsSidebarOpen(false);
-                }}
-              >
-                {item.name}
-              </span>
-            </li>
-          ))}
-        </ul>
       </div>
     </header>
   );

@@ -1,25 +1,43 @@
+// src/components/Footer.js
 import React from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'; // Social media icons
+import { useLanguage } from '../LanguageContext'; // Import useLanguage hook
 import '../styles/Footer.css';
 
 // Footer component with desktop and mobile layouts
 function Footer() {
+  const { language } = useLanguage(); // Access language state
+
+  // Bilingual content
+  const content = {
+    en: {
+      pagesHeader: 'Pages',
+      pages: ['Home', 'Information', 'Contact', 'Portfolio', 'Settings'],
+      socialMediaHeader: 'Social Media',
+      copyright: '© 2025 FehrWare Tech Solutions',
+    },
+    fr: {
+      pagesHeader: 'Pages',
+      pages: ['Accueil', 'Informations', 'Contact', 'Portefeuille', 'Paramètres'],
+      socialMediaHeader: 'Réseaux sociaux',
+      copyright: '© 2025 FehrWare Tech Solutions',
+    },
+  };
+
   return (
     <footer className="footer">
       {/* Desktop layout with text links */}
       <div className="desktop-footer">
         <div className="footer-column">
-          <h3>Pages</h3>
+          <h3>{content[language].pagesHeader}</h3>
           <ul>
-            <li><span>Home</span></li>
-            <li><span>Information</span></li>
-            <li><span>Contact</span></li>
-            <li><span>Portfolio</span></li>
-            <li><span>Settings</span></li>
+            {content[language].pages.map((page, index) => (
+              <li key={index}><span>{page}</span></li>
+            ))}
           </ul>
         </div>
-        <div className="footer-column">
-          <h3>Social Media</h3>
+        <div className="footer-column" id="footer-social-column">
+          <h3>{content[language].socialMediaHeader}</h3>
           <ul>
             <li><a href="https://github.com/bryanjfehr/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li><a href="https://x.com/fehrwaretech/" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -40,7 +58,7 @@ function Footer() {
         </a>
       </div>
       {/* Copyright notice */}
-      <p>© 2025 FehrWare Tech Solutions</p>
+      <p>{content[language].copyright}</p>
     </footer>
   );
 }

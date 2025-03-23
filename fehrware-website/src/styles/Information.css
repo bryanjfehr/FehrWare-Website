@@ -1,94 +1,112 @@
-/* Information section styling with dark grey/black theme and teal accents */
+/* src/styles/Information.css */
+/* Information section styling with theme variables */
 .information {
-    padding: 2rem;
-  }
-  
-  /* Section header styling */
-  .information h2 {
-    color: #FFFFFF; /* White for emphasis */
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center; /* Centered for balance */
-  }
-  
-  /* Container for side-by-side layout */
+  padding: 2rem;
+  overflow: hidden; /* Prevent overflow of background image */
+  position: relative; /* Establish a positioning context for children */
+}
+
+/* Section header styling */
+.information h2 {
+  color: var(--text); /* Use theme variable */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Centered for balance */
+  z-index: 1;
+}
+
+/* Container for side-by-side layout */
+.information-container {
+  display: flex; /* Flexbox for side-by-side layout */
+  justify-content: space-between; /* Space out image and content */
+  gap: 2rem; /* Space between image and text */
+  align-items: flex-start; /* Align items at the top */
+}
+
+/* Left section: Image */
+.information-image {
+  flex: 1; /* Takes up proportional space */
+  max-width: 400px; /* Limit width for balance */
+  z-index: 1;
+}
+
+/* Image styling */
+.about-image {
+  width: 100%; /* Full width of container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px var(--shadow); /* Subtle shadow */
+  z-index: 1;
+}
+
+/* Right section: About Me and Services */
+.information-content {
+  flex: 2; /* Takes up more space than image */
+  display: flex;
+  flex-direction: column; /* Stack About Me and Services vertically */
+  gap: 2rem; /* Space between sections */
+}
+
+/* About Me section */
+.about-me h3,
+.services h3 {
+  color: var(--accent); /* Use theme variable */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Text styling */
+.about-me p,
+.services ul {
+  color: var(--text); /* Use theme variable */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Services list styling */
+.services ul {
+  list-style: none; /* Remove default bullets */
+}
+
+/* Services list items */
+.services ul li {
+  margin-bottom: 0.5rem; /* Space between items */
+  position: relative; /* For custom bullet */
+  padding-left: 1.5rem; /* Space for custom bullet */
+}
+
+/* Custom bullet for services */
+.services ul li::before {
+  content: '•'; /* Custom bullet */
+  color: var(--accent); /* Use theme variable */
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   .information-container {
-    display: flex; /* Flexbox for side-by-side layout */
-    justify-content: space-between; /* Space out image and content */
-    gap: 2rem; /* Space between image and text */
-    align-items: flex-start; /* Align items at the top */
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center items */
   }
-  
-  /* Left section: Image */
+
   .information-image {
-    flex: 1; /* Takes up proportional space */
-    max-width: 400px; /* Limit width for balance */
+    max-width: 100%; /* Full width on mobile */
+    margin-bottom: 1.5rem; /* Space below image */
   }
-  
-  /* Image styling */
-  .about-image {
-    width: 100%; /* Full width of container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  }
-  
-  /* Right section: About Me and Services */
+
   .information-content {
-    flex: 2; /* Takes up more space than image */
-    display: flex;
-    flex-direction: column; /* Stack About Me and Services vertically */
-    gap: 2rem; /* Space between sections */
+    width: 100%; /* Full width on mobile */
   }
-  
-  /* About Me section */
-  .about-me h3,
-  .services h3 {
-    color: #00A8A8; /* Teal accent for headings */
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Text styling */
-  .about-me p,
-  .services ul {
-    color: #D3D3D3; /* Light grey for readability */
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  /* Services list styling */
-  .services ul {
-    list-style: none; /* Remove default bullets */
-  }
-  
-  .services ul li {
-    margin-bottom: 0.5rem; /* Space between items */
-    position: relative; /* For custom bullet */
-    padding-left: 1.5rem; /* Space for custom bullet */
-  }
-  
-  /* Custom bullet for services */
-  .services ul li::before {
-    content: '•'; /* Custom bullet */
-    color: #00A8A8; /* Teal accent */
-    position: absolute;
-    left: 0;
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .information-container {
-      flex-direction: column; /* Stack image and content vertically */
-      align-items: center; /* Center items */
-    }
-  
-    .information-image {
-      max-width: 100%; /* Full width on mobile */
-      margin-bottom: 1.5rem; /* Space below image */
-    }
-  
-    .information-content {
-      width: 100%; /* Full width on mobile */
-    }
-  }
+}
+
+.info-background {
+  position: absolute; /* Position behind text */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  object-fit: cover; /* Maintain aspect ratio while filling space */
+  z-index: 0; /* Place behind other content (text has default z-index of 1) */
+  opacity: 0.7; /* Slight transparency for text readability (adjust as needed) */
+}

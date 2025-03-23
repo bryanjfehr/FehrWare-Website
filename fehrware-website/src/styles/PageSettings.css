@@ -1,25 +1,53 @@
+/* src/styles/PageSettings.css */
 /* Page settings section styling */
 .page-settings {
-    padding: 2rem;
-  }
-  
-  .page-settings h2 {
-    color: #FFFFFF; /* White for emphasis */
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Checkbox styling */
-  .page-settings label {
-    color: #D3D3D3; /* Light grey */
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .page-settings input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem;
-    accent-color: #00A8A8; /* Teal accent for checkbox */
-  }
+  padding: 2rem;
+}
+
+.page-settings h2 {
+  color: var(--text); /* Use theme variable */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Settings group for language and theme selectors */
+.settings-group {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label styling */
+.page-settings label,
+.settings-group label {
+  color: var(--text); /* Use theme variable */
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Checkbox styling */
+.page-settings input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--accent); /* Use theme variable */
+}
+
+/* Select dropdown styling */
+.settings-group select {
+  background: var(--input-bg); /* Use theme variable */
+  color: var(--text); /* Use theme variable */
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  max-width: 300px; /* Limit width for better layout */
+}
+
+.settings-group select:focus {
+  outline: none;
+  border-color: var(--accent); /* Use theme variable */
+}

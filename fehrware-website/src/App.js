@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -7,6 +8,8 @@ import Portfolio from './components/Portfolio';
 import PageSettings from './components/PageSettings';
 import Footer from './components/Footer';
 import { FaHome, FaInfo, FaEnvelope, FaFolder, FaCog } from 'react-icons/fa'; // Icons for mobile navbar
+import { LanguageProvider } from './LanguageContext'; // Import LanguageProvider
+import { ThemeProvider } from './ThemeContext'; // Import ThemeProvider
 import './styles/App.css';
 
 // Main App component managing SPA state and rendering
@@ -58,22 +61,27 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {/* Header with navigation and settings toggle */}
-      <Header setCurrentSection={setCurrentSection} setShowTimeTab={setShowTimeTab} />
-      {/* Main content area displaying the active section */}
-      <main>{renderSection()}</main>
-      {/* Footer with links */}
-      <Footer />
-      {/* Mobile navbar with icons for navigation */}
-      <nav className="mobile-navbar">
-        <span onClick={() => setCurrentSection('home')}><FaHome /></span>
-        <span onClick={() => setCurrentSection('information')}><FaInfo /></span>
-        <span onClick={() => setCurrentSection('contact')}><FaEnvelope /></span>
-        <span onClick={() => setCurrentSection('portfolio')}><FaFolder /></span>
-        <span onClick={() => setCurrentSection('settings')}><FaCog /></span>
-      </nav>
-    </div>
+    // Wrap the app with LanguageProvider and ThemeProvider
+    <LanguageProvider>
+      <ThemeProvider>
+        <div className="App">
+          {/* Header with navigation and settings toggle */}
+          <Header setCurrentSection={setCurrentSection} setShowTimeTab={setShowTimeTab} />
+          {/* Main content area displaying the active section */}
+          <main>{renderSection()}</main>
+          {/* Footer with links */}
+          <Footer />
+          {/* Mobile navbar with icons for navigation */}
+          <nav className="mobile-navbar">
+            <span onClick={() => setCurrentSection('home')}><FaHome /></span>
+            <span onClick={() => setCurrentSection('information')}><FaInfo /></span>
+            <span onClick={() => setCurrentSection('contact')}><FaEnvelope /></span>
+            <span onClick={() => setCurrentSection('portfolio')}><FaFolder /></span>
+            <span onClick={() => setCurrentSection('settings')}><FaCog /></span>
+          </nav>
+        </div>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

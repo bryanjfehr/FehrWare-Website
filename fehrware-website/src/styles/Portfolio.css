@@ -1,92 +1,94 @@
-/* Portfolio section styling with dark grey/black theme and teal accents */
+/* src/styles/Portfolio.css */
+/* Portfolio section styling with theme variables */
 .portfolio {
-    padding: 2rem;
-  }
-  
-  /* Section header styling */
-  .portfolio h2 {
-    color: #FFFFFF; /* White for emphasis */
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center; /* Centered for balance */
-  }
-  
-  /* Container for all project sections */
-  .portfolio-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Space between projects */
-  }
-  
-  /* Individual project section layout */
+  padding: 2rem;
+}
+
+/* Section header styling */
+.portfolio h2 {
+  color: var(--text); /* Use theme variable */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Centered for balance */
+}
+
+/* Container for all project sections */
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between projects */
+}
+
+/* Individual project section layout */
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem; /* Space between image and content */
+}
+
+/* Left section: GitHub card image */
+.project-image {
+  flex: 1;
+  max-width: 300px; /* Limit image width for balance */
+}
+
+/* Image styling */
+.project-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px var(--shadow); /* Subtle shadow */
+}
+
+/* Right section: Title, description, and link */
+.project-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Space between title, description, and link */
+}
+
+/* Project title styling */
+.project-title {
+  color: var(--accent); /* Use theme variable */
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Project description styling */
+.project-description {
+  color: var(--text); /* Use theme variable */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* GitHub link styling */
+.project-link {
+  color: var(--accent); /* Use theme variable */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* GitHub link hover effect */
+.project-link:hover {
+  color: var(--accent-hover); /* Use theme variable */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
   .project-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1.5rem; /* Space between image and content */
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center items */
   }
-  
-  /* Left section: GitHub card image */
+
   .project-image {
-    flex: 1;
-    max-width: 300px; /* Limit image width for balance */
+    max-width: 100%; /* Full width on mobile */
+    margin-bottom: 1rem; /* Space below image */
   }
-  
-  /* Image styling */
-  .project-card-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Subtle shadow */
-  }
-  
-  /* Right section: Title, description, and link */
+
   .project-content {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem; /* Space between title, description, and link */
+    width: 100%; /* Full width on mobile */
   }
-  
-  /* Project title styling */
-  .project-title {
-    color: #00A8A8; /* Teal accent for titles */
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  /* Project description styling */
-  .project-description {
-    color: #D3D3D3; /* Light grey for readability */
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-  /* GitHub link styling */
-  .project-link {
-    color: #00A8A8; /* Teal accent */
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .project-link:hover {
-    color: #008080; /* Darker teal on hover */
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .project-section {
-      flex-direction: column; /* Stack image and content vertically */
-      align-items: center; /* Center items */
-    }
-  
-    .project-image {
-      max-width: 100%; /* Full width on mobile */
-      margin-bottom: 1rem; /* Space below image */
-    }
-  
-    .project-content {
-      width: 100%; /* Full width on mobile */
-    }
-  }
+}

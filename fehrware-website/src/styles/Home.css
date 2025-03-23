@@ -1,3 +1,4 @@
+/* src/styles/Home.css */
 /* Home.css */
 .home {
   padding: 1rem;
@@ -27,7 +28,7 @@
 
 /* Hero text styling */
 .hero h1 {
-  color: #FFFFFF; /* White for emphasis */
+  color: var(--text); /* Use theme variable */
   font-size: 2.5rem;
   margin: 2rem 0;
   position: relative; /* Ensure text stays above background */
@@ -35,7 +36,7 @@
 }
 
 .hero p {
-  color: #D3D3D3; /* Light grey */
+  color: var(--text); /* Use theme variable */
   font-size: 1.2rem;
   line-height: 1.6;
   max-width: 800px;
@@ -49,16 +50,16 @@
   margin-top: 1rem;
   /* Add translucent background to the header for consistency */
   background-color: rgba(0, 0, 0, 0.6); /* Darker black with 60% opacity */
-  color: #FFFFFF; /* White text */
+  color: var(--text); /* Use theme variable */
   border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow effect */
   display: inline-block; /* Fit the background to the content width */
 }
 
 .welcome-text-background {
   background-color: rgba(0, 0, 0, 0.6); /* Darker black with 60% opacity for better readability */
-  color: #FFFFFF; /* White text */
+  color: var(--text); /* Use theme variable */
   padding: 1rem;
   border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  box-shadow: 0 2px 4px var(--shadow); /* Subtle shadow effect */
 }
